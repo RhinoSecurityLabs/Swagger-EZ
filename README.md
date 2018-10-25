@@ -1,15 +1,15 @@
 # Swagger-EZ
 A tool geared towards pentesting APIs using OpenAPI definitions.
 
-We have a version hosted here:
+We have a version hosted here: https://rhinosecuritylabs.github.io/Swagger-EZ/
 
-##Setup
+## Setup
 `git clone https://github.com/RhinoSecurityLabs/Swagger-EZ.git`
 
 Open `index.html` in your browser.
 
 
-##Usage
+## Usage
 Once the UI is loaded into the browser, I suggest presser F12 to have the browser console open to watch for potential errors.
 
 Configure your browser to use the proxy tool you would like i.e. Burp Suite.
