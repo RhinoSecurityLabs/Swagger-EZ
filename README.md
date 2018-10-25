@@ -10,7 +10,7 @@ Open `index.html` in your browser.
 
 
 ## Usage
-Once the UI is loaded into the browser, I suggest presser F12 to have the browser console open to watch for potential errors.
+Once the UI is loaded into the browser, we suggest pressing F12 to have the browser console open to watch for potential errors.
 
 Configure your browser to use the proxy tool you would like i.e. Burp Suite.
 
