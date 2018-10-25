@@ -1,0 +1,53 @@
+<!--
+TODO
+error logging to page
+Authorization
+-->
+
+<html>
+<head>
+<title>
+</title>
+ 	<link rel = "stylesheet" type = "text/css" href = "css/layout.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<script src='js/swagger-client.js' type='text/javascript'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type='text/javascript'></script>
+<script src='js/ui.js' type='text/javascript'></script>
+<body>
+
+	<div id="navbar" class="topnav">
+		<div class="search-container">
+      		Url or raw JSON: <input type="text" size=70 id="url" value="https://petstore.swagger.io/v2/swagger.json">
+      		<button type="submit" onclick=executeAll(apis);>Send All</button>
+      		<button type="submit" onclick=autoFill();>Auto Fill</button>
+      		<button type="submit" onclick=init(document.getElementById("url").value);>Load</button>
+
+    	</div>
+	</div>
+	<br>
+	<div id="info" class="w3-container"></div>
+	<br>
+	<div id="head" class="w3-container">
+</div>
+	<div id="input-form-container" class="w3-container">
+	</div>
+	<br>
+	<div class="w3-panel w3-card"><code>
+			<h4><p align="right">Regex for CORS response headers Burp Suite</p></h4>
+		<p align="right">
+<b>Match: </b>Access-Control-Allow-Origin:(.*?)$<br>
+<b>Replace: </b>Access-Control-Allow-Origin: *<br>
+<br>
+<b>Match: </b>Access-Control-Allow-Methods:(.*?)$<br>
+<b>Replace: </b>Access-Control-Allow-Methods: DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT<br>
+<br>
+<b>Match: </b>Access-Control-Allow-Headers:(.*?)$
+</p>
+</code></div>
+<div id="output">
+<h4>Requests Made:</h4>
+</div>
+
+</body>
+
