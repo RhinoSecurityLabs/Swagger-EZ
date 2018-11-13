@@ -21,3 +21,4 @@ Pressing load will parse the JSON and load the input fields for the parameters t
 Fill out each parameters with some data and when ready press send.
 
 You should see the site tree of your proxy filling up.
+![Demo](https://rhinosecuritylabs.github.io/Swagger-EZ/media/demo.gif)
