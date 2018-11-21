@@ -3,6 +3,8 @@ A tool geared towards pentesting APIs using OpenAPI definitions.
 
 We have a version hosted here: https://rhinosecuritylabs.github.io/Swagger-EZ/
 
+Blog post: https://rhinosecuritylabs.com/application-security/simplifying-api-pentesting-swagger-files/
+
 ## Setup
 `git clone https://github.com/RhinoSecurityLabs/Swagger-EZ.git`
 
