@@ -134,11 +134,11 @@ function init(json){
     	element.innerHTML = '<label>Parameter | Type</label><hr>'
    
    // initialize swagger client
-   
+   var API_KEY = document.getElementById('api-key').value;
+
   window.client = new SwaggerClient({
     url: json,
     success: function() {
-
     	document.getElementById("info").innerHTML = '<h2>'+client.info.title+'</h2>';
     	client.useJQuery = true
         apis = client.apisArray;
@@ -166,6 +166,9 @@ function init(json){
         	}
         }
 
-    }
+    },
+       	authorizations : {
+			authHeader: new SwaggerClient.ApiKeyAuthorization('Authorization', 'Bearer '+API_KEY, 'header'),
+  		}
   });
 }
