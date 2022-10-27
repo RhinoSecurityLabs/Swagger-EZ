@@ -68,10 +68,14 @@ function autoFill(){
 			if(type == 'string' || type == 'array'){
 				elements[i].value = "test";
 				elements[i].onchange()
-			}
-			if(type == 'integer'){
+			}else if(type == 'integer'){
 				elements[i].value = 1;
 				elements[i].onchange()
+			}else if(type == 'boolean'){
+				elements[i].value = 1;
+				elements[i].onchange()
+			}else{
+			    console.log("Unhandled default type (type " + type + ")")
 			}
 		}
 	}
@@ -83,14 +87,14 @@ function executeAll(apis){
 		var methods = getKeys(client.apis[cur_op].apis);
 		for(b=0;b<methods.length;b++){
 			console.log(client.apis[cur_op].apis[methods[b]]);
-			
+
 			method_params = client.apis[cur_op].apis[methods[b]].parameters;
 			for(c=0;c<method_params.length;c++){
 				if(method_params[c].sampleJSON != null){
 					var body = method_params[c].sampleJSON;
 				}
 			}
-			PARAMS.body = body;			
+			PARAMS.body = body;
 			request = client.apis[cur_op].apis[methods[b]].execute(PARAMS);
 			requestOutput(request.method,request.url,request.status);
 		}
@@ -132,7 +136,7 @@ function init(json){
     	element.innerHTML = "";
     	var element = document.getElementById("head");
     	element.innerHTML = '<label>Parameter | Type</label><hr>'
-   
+
    // initialize swagger client
    var API_KEY = document.getElementById('api-key').value;
 
